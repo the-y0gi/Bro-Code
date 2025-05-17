@@ -42,13 +42,13 @@ const Register = () => {
       return false;
     }
 
-    // const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{6,}$/;
-    // if (!passwordRegex.test(password)) {
-    //   toast.error(
-    //     "Password must be at least 6 characters and include uppercase, lowercase, and a number."
-    //   );
-    //   return false;
-    // }
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{6,}$/;
+    if (!passwordRegex.test(password)) {
+      toast.error(
+        "Password must be at least 6 characters and include uppercase, lowercase, and a number."
+      );
+      return false;
+    }
 
     return true;
   };
