@@ -1,0 +1,129 @@
+:root {
+  --text: #EDEDED;
+  --background: #1A1D24;
+  --primary: #4a4150;
+  --secondary: #565a65;
+  --accent: #20232A;
+  --muted: #222429;
+  --placeholder: #7A7E87;
+  --hover-text: #AFCBFF;
+  --error: #FF6B6B;
+}
+
+
+
+.user-profile-wrapper {
+  overflow-y: auto;
+  max-width: 1000px;
+  padding: 24px;
+  background: var(--background);
+  border-radius: 0 15px 15px 0;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+}
+
+.user-profile-wrapper .profile-title {
+  text-align: center;
+  color: var(--hover-text);
+  font-size: 28px;
+  margin-bottom: 32px;
+  
+}
+
+.user-profile-wrapper .profile-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+.user-profile-wrapper .profile-left,
+.profile-right {
+  flex: 1;
+  min-width: 270px;
+  background: var(--muted);
+  border: 1px solid var(--secondary);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.user-profile-wrapper .profile-left{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.user-profile-wrapper .profile-avatar {
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid var(--primary);
+  margin-bottom: 16px;
+}
+
+.user-profile-wrapper .profile-left h3 {
+  font-size: 22px;
+  color: var(--hover-text);
+}
+
+.user-profile-wrapper .profile-left p {
+  margin: 10px 0 20px;
+  color: var(--placeholder);
+}
+
+.user-profile-wrapper input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  background: var(--background);
+  border: 1px solid var(--secondary);
+  border-radius: 8px;
+  color: var(--text);
+  font-size: 12px;
+  margin-bottom: 14px;
+}
+
+.user-profile-wrapper input::placeholder,
+textarea::placeholder {
+  color: var(--placeholder);
+}
+
+.user-profile-wrapper button {
+  padding: 10px 25px;
+  background: var(--primary);
+  color: var(--text);
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.user-profile-wrapper button:hover {
+  background: var(--hover-text);
+  color: var(--accent);
+}
+
+.user-profile-wrapper .button-group {
+  display: flex;
+  gap: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .profile-content {
+    flex-direction: row;
+  }
+
+  .profile-left,
+  .profile-right {
+    width: 100%;
+  }
+
+  .profile-title {
+    
+    font-size: 14px;
+  }
+}

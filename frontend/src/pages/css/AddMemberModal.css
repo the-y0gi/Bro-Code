@@ -1,0 +1,103 @@
+
+
+/* Outer wrapper to hold the modal in the full viewport */
+.add-member-modal {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1001;
+  overflow-y: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+/* Modal content */
+.add-member-modal .modal-content {
+  background: #20232A;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 350px;
+  max-height: 55vh;
+  overflow-y: auto;
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Close button */
+.add-member-modal .close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: black;
+  border: none;
+  width: 30px;
+  height: 30px;
+  font-size: 1.2rem;
+  background: none;
+  cursor: pointer;
+  z-index: 10;
+}
+
+/* User list */
+.add-member-modal .user-list {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Individual user */
+.add-member-modal .user-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  cursor: pointer;
+  border-bottom: 1px solid #ddd;
+}
+
+/* User image */
+.add-member-modal .user-dp {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin-right: 10px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.add-member-modal .user-dp img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 600px) {
+  .add-member-modal .modal-content {
+    padding: 15px;
+  
+  }
+
+  .add-member-modal .close-btn {
+    width: 25px;
+    height: 25px;
+    font-size: 1rem;
+  }
+
+  .add-member-modal .user-dp {
+    width: 30px;
+    height: 30px;
+  }
+
+  .add-member-modal .user-item {
+    padding: 8px 0;
+  }
+}

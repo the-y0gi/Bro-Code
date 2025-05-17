@@ -1,0 +1,197 @@
+
+.user-status {
+  max-width: 700px;
+  margin: 10px auto;
+  padding: 20px;
+  height: auto;
+  max-height: 300px;
+  overflow-y: auto;
+  background-color: var(--background);
+  border: 1px solid var(--placeholder);
+  border-radius: 8px;
+  color: var(--text);
+  font-size: 13px;
+}
+
+.requested-user {
+  max-height: 180px;
+  overflow-y: auto;
+}
+
+.user-status::-webkit-scrollbar,
+.users-container::-webkit-scrollbar,
+.suggestion-box::-webkit-scrollbar {
+  width: 6px;
+}
+
+.user-status::-webkit-scrollbar-thumb,
+.users-container::-webkit-scrollbar-thumb,
+.suggestion-box::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 10px;
+}
+
+.status-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--secondary);
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  color: var(--text);
+}
+
+.status-mode.accepted {
+  color: #22c55e;
+}
+.status-mode.pending {
+  color: #eab308;
+}
+.status-mode.rejected {
+  color: var(--error);
+}
+
+.status-img {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  border: 1px solid var(--primary);
+  overflow: hidden;
+}
+.status-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.user-name p {
+  text-transform: capitalize;
+  color: var(--text);
+}
+
+.req-status-mode {
+  display: flex;
+  gap: 20px;
+}
+.req-status-mode i {
+  font-size: 17px;
+  cursor: pointer;
+  color: var(--primary);
+}
+
+.users-container {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary) transparent;
+}
+
+
+.user-profile:hover {
+  transform: scale(1.03);
+}
+
+.user-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid var(--accent);
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.user-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.user-profile h2 {
+  font-size: 16px;
+  margin: 5px 0;
+  color: var(--primary);
+}
+
+.user-profile p {
+  font-size: 13px;
+  font-style: italic;
+  margin: 0;
+  color: var(--hover-text);
+}
+
+.user-profile button {
+  width: 80%;
+  margin-top: 10px;
+  padding: 6px 10px;
+  font-size: 14px;
+  background-color: var(--secondary);
+  color: var(--text);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.user-profile button:hover {
+  background-color: var(--accent);
+}
+
+@media screen and (max-width: 768px) {
+  .user-status {
+    max-width: 100%;
+    min-width: 400px;
+    padding: 15px;
+  }
+
+  .users-container {
+    padding: 10px;
+    gap: 15px;
+  }
+
+  .user-profile {
+    max-width: 100%;
+    min-height: auto;
+    padding: 12px;
+  }
+
+  .user-img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .user-profile h2 {
+    font-size: 14px;
+  }
+
+  .user-profile p {
+    font-size: 12px;
+  }
+
+  .user-profile button {
+    font-size: 12px;
+    padding: 4px 8px;
+    width: auto;
+  }
+
+  .status-bar {
+    flex-direction: row;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .status-bar .status-img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .req-status-mode {
+    gap: 12px;
+  }
+}
+

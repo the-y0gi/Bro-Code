@@ -1,0 +1,171 @@
+.notification {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    background: linear-gradient(135deg, #1a1a1b, #393a3d);
+    color: var(--text);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow: hidden;
+    border-radius: 0 15px 15px 0;
+    
+  }
+  
+  .notification-wrapper {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  /* Panels */
+  .user-status-section,
+  .requested-user-section {
+    flex: 1;
+    min-width: 250px;
+    padding: 20px;
+    background-color: var(--background);
+    border: 1px solid var(--placeholder);
+    border-radius: 10px;
+    min-height: 250px;
+    overflow-y: auto;
+  }
+  
+  /* Status Cards */
+  .status-bar {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background-color: var(--secondary);
+    padding: 10px 15px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+  }
+  
+  .status-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid var(--primary);
+  }
+  .status-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .user-name {
+    flex: 1;
+  }
+  .user-name p {
+    margin: 0;
+    text-transform: capitalize;
+    color: var(--text);
+    font-weight: 500;
+  }
+  
+  .status-mode {
+    min-width: 80px;
+    text-align: center;
+    font-weight: 600;
+  }
+  .status-mode.accepted {
+    color: #22c55e;
+  }
+  .status-mode.pending {
+    color: #eab308;
+  }
+  .status-mode.rejected {
+    color: var(--error);
+  }
+  
+  .req-status-mode {
+    display: flex;
+    gap: 10px;
+  }
+  .req-status-mode button {
+    padding: 5px 10px;
+    border-radius: 6px;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+  }
+  .req-status-mode i {
+    font-size: 18px;
+  }
+  
+  /* Popup */
+  .popup-message {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: var(--primary);
+    color: var(--background);
+    padding: 10px 20px;
+    border-radius: 10px;
+    z-index: 9999;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    animation: fadeInOut 2s ease-in-out forwards;
+  }
+  
+  @keyframes fadeInOut {
+    0% {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    10%, 90% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+  }
+  
+  /* ✅ Responsive */
+  @media screen and (max-width: 768px) {
+    .notification {
+      padding: 10px;
+    }
+  
+    .notification-wrapper {
+      flex-direction: column;
+      padding: 10px;
+    }
+  
+    .user-status-section,
+    .requested-user-section {
+      max-height: 350px;
+    }
+      .status-bar {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background-color: var(--secondary);
+    padding: 5px 10px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+  }
+  
+  
+    .status-img {
+      width: 35px;
+      height: 35px;
+    }
+  
+    .popup-message {
+      font-size: 14px;
+      padding: 8px 12px;
+      top: 10px;
+      right: 10px;
+    }
+  }
+  

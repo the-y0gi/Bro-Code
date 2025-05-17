@@ -1,0 +1,265 @@
+
+/* :root {
+  --text: #ebe7ee;
+  --background: #0d0b0f;
+  --primary: #bcb2c7;
+  --secondary: #684b5e;
+  --accent: #a27c8e;
+  --muted: #807e7e1f;
+  --placeholder: #2b333a89;
+  --hover-text: #bcb2c7;
+  --error: #f87171;
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Recursive:wght@400;700&display=swap');
+
+:root {
+  --text: #EDEDED;
+  --background: #1A1D24;
+  --primary: #4a4150;
+  --secondary: #565a65;
+  --accent: #20232A;
+  --muted: #222429;
+  --placeholder: #7A7E87;
+  --hover-text: #AFCBFF;
+  --error: #FF6B6B;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  width: 100%;
+}
+
+body {
+  font-family: 'Recursive', sans-serif;
+  background: var(--background);
+  color: var(--text);
+  letter-spacing: 1px;
+  transition: background 0.2s ease;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text);
+}
+
+a:hover {
+  color: var(--hover-text);
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  min-height: 100vh;
+  background: var(--background);
+  color: var(--text);
+}
+
+.login-container {
+  position: relative;
+  width: 100%;
+  max-width: 330px;
+}
+
+.form-container {
+  border: 1px solid hsla(0, 0%, 65%, 0.158);
+  box-shadow: 0 0 10px 2px  rgba(94, 86, 86, 0.2);
+  border-radius: 10px;
+  backdrop-filter: blur(20px);
+  z-index: 99;
+  padding: 2rem;
+  background-color: rgba(125, 125, 125, 0.05);
+}
+
+.login-container form {
+  position: relative;
+}
+
+.login-container form input {
+  display: block;
+  width: 100%;
+  margin: 1.5rem 0;
+  padding: 13.5px;
+  background-color: var(--muted);
+  opacity: 0.81;
+  color: var(--text);
+  border: 1px solid rgba(128, 128, 128, 0.156);
+  border-radius: 5px;
+  outline: none;
+  font-weight: 500;
+  font-size: 11px;
+  backdrop-filter: blur(15px);
+}
+
+.login-container form input:focus {
+  box-shadow: 0 0 16px 1px rgba(78, 78, 78, 0.2);
+  animation: wobble 0.3s ease-in;
+}
+
+.login-container form i {
+  position: absolute;
+  top: 73px;
+  right: 10px;
+  cursor: pointer;
+  color: var(--placeholder);
+}
+
+.login-container form button {
+  background-color: var(--primary);
+  color: var(--text);
+  padding: 13px;
+  border-radius: 5px;
+  font-size: 13px;
+  font-weight: bold;
+  width: 100%;
+  cursor: pointer;
+  margin-bottom: 1.5rem;
+  transition: all 0.2s ease-in-out;
+  border: none;
+}
+
+.login-container form button:hover {
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.15);
+  transform: scale(1.02);
+}
+
+.circle {
+  width: 8rem;
+  height: 8rem;
+  background: var(--hover-text);
+  border-radius: 50%;
+  position: absolute;
+  filter: blur(5px);
+}
+
+.circle-one {
+  top: 0;
+  left: 0;
+  transform: translate(-45%, -45%);
+}
+
+.illustration {
+  position: absolute;
+  top: -14%;
+  right: -2px;
+  width: 90%;
+}
+
+.illustration-register {
+  position: absolute;
+  top: 10px;
+  right: -130px;
+  width: 90%;
+  filter: brightness(2);
+}
+
+.register-forget {
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: right;
+  font-size: 0.9rem;
+  margin-right: 4px;
+}
+
+.register-forget a {
+  font-size: 0.5rem;
+  color: var(--text);
+}
+
+.opacity {
+  opacity: 0.6;
+}
+
+.error-text {
+  color: var(--error);
+  font-size: 0.85rem;
+  margin-top: 4px;
+  margin-left: 4px;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+@keyframes wobble {
+  0% {
+    transform: scale(1.025);
+  }
+  25% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.025);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .form-container {
+    padding: 1.5rem;
+  }
+
+  .login-container {
+   margin: 20px;
+  }
+
+  .illustration {
+    width: 80%;
+    top: -10%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  html {
+    font-size: 15px;
+  }
+
+  .circle {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  .form-container {
+    padding: 1.5rem;
+  }
+
+  .login-container form input,
+  .login-container form button {
+    padding: 13px;
+    font-size: 14px;
+  }
+
+  .register-forget {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .register-forget a {
+    font-size: 10px;
+  }
+}

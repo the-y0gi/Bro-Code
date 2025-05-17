@@ -1,0 +1,54 @@
+
+
+   .network-banner {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 280px;
+    max-width: 90vw;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 16px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    animation: slideFade 0.4s ease-out;
+    box-sizing: border-box;
+  }
+  
+  /* Connection status styles */
+  .network-banner.offline {
+    background: linear-gradient(135deg, #aa2c2e, #f36f56);
+  }
+  
+  .network-banner.online {
+    background: linear-gradient(135deg, #42e695, #3bb2b8);
+  }
+  
+  /* Animation */
+  @keyframes slideFade {
+    from {
+      opacity: 0;
+      transform: translate(-50%, -20px);
+    }
+    to {
+      opacity: 1;
+      transform: translate(-50%, 0);
+    }
+  }
+
+  @media (max-width: 500px) {
+    .network-banner {
+      font-size: 14px;
+      padding: 10px 16px;
+      max-width: 95vw;
+      top: 10px;
+    }
+  }
+  
