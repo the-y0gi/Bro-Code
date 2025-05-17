@@ -11,7 +11,7 @@ export const SocketProvider = ({ children, userId }) => {
 
   useEffect(() => {
     if (userId) {
-      const newSocket = io("http://localhost:3000", {
+      const newSocket = io("https://bro-code-cuxb.onrender.com/", {
         transports: ["websocket"],
         query: { userId },
       });
